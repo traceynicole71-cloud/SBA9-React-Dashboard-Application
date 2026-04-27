@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Task, TaskFormData, FilterOptions, Status } from '../../types/index.ts';
+import type { Task, TaskFormData, FilterOptions, Status } from '../../types/index.ts';
 import { TaskForm } from '../TaskForm/TaskForm.tsx';
 import { TaskFilter } from '../TaskFilter/TaskFilter.tsx';
 import  { TaskList }from '../TaskList/TaskList.tsx';
@@ -12,7 +12,7 @@ const [tasks, setTasks] = useState<Task[]>(() => {
     return saved ? JSON.parse(saved) : [];
 });
 
-const [filter, setFilters] = useState<FilterOptions>({
+const [filters, setFilters] = useState<FilterOptions>({
     status: 'All',
     priority: 'All',
     searchQuery: '',
@@ -38,6 +38,13 @@ const handleUpdateStatus = (id: string, status: Status) => {
     setTasks(prev => prev.map(t => t.id === id ? { ...t, status } : t));
 };
 
+const handleDeleteTask = (id: string) => {
+    setTasks(prev => prev.filter(t => t.id !== id));
+};
+
+const visibleTasks = filterTasks(tasks, filters);
+const sortedTasks = sortTaskByDate(visibleTasks);
+
 return (
     <div className="max-w-6xl mx-auto px-4 py-10">
         <header className="mb-10 text-center">
@@ -51,11 +58,11 @@ return (
         <TaskFilter filters={filters} setFilters={setFilters} />
     </aside>
 
-    //main content area
+    {/*main content area*/}
     <main className="lg:col-span-8">
-        <h2 className="text-xl font-bold mb-4 dark:text-white"> Your Tasks ({visibleTasks.length})</h2>
+        <h2 className="text-xl font-bold mb-4 dark:text-white"> Your Tasks ({sortedTasks.length})</h2>
 <TaskList
-tasks={visibleTasks}
+tasks={sortedTasks}
 onDelete={handleDeleteTask}
 onStatusChange={handleUpdateStatus}
 />
