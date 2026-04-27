@@ -1,5 +1,5 @@
-import REact from 'react';
-import { FilterOptions, Status, Priority } from '../../types.index.ts'
+import React from 'react';
+import type { FilterOptions, Status, Priority } from '../../types'
 
 interface Props {
     filters: FilterOptions;
@@ -17,7 +17,7 @@ export const TaskFilter: React.FC<Props> = ({ filters, setFilters }) => {
                 placeholder="Search Title or Description..."
                 className="p-2.5 rounded-lg border dark:bg-gray-700 dark:text-white dark:border-gray-600 text.sm"
                 value={filters.status}
-                onChange={(e) => setFilters({ ...filters, status: e.target.value })}
+                onChange={(e) => setFilters({ ...filters, status: e.target.value as Status | 'All' })}
             />
             <div className="grid grid-cols-2 gap-3">
                 <select
