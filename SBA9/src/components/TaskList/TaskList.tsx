@@ -34,7 +34,7 @@ export const TaskList: React.FC<Props> = ({ tasks, onDelete, onStatusChange }) =
     key={task.id}
     task={task}
     onDelete={onDelete}
-    onStatausChange={onStatusChange}
+    onStatusChange={onStatusChange}
     />
 ))}
         </div>

@@ -12,8 +12,8 @@ interface Props {
 export const TaskItem: React.FC<Props> = ({ task, onDelete, onStatusChange }) => {
 
     //priority badge styling
-    const getPriorityStyles = () => {
-        switch (task.priority) {
+    const getPriorityStyles = (priority: string): string => {
+        switch (priority) {
             case 'High':
                 return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
             case 'Medium':
