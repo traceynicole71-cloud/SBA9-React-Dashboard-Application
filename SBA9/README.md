@@ -1,75 +1,69 @@
-# React + TypeScript + Vite
+# Component Creation and Props
+This project tests your understanding of React components, state management, TypeScript integration, form handling, and component composition.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## React Compiler
+## Overview
+In this assessment, you will apply the skills you have developed throughout your React training to build a functional, real-world dashboard application. This project will test your understanding of React components, state management, TypeScript integration, form handling, and component composition.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+You will create a Task Management Dashboard using React and TypeScript. The final deliverable will include a GitHub repository with your project and a written reflection on your approach and the challenges you faced.
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+### The challenge
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-To complete a finished , working task dashboard by analyzing requirements, planning necessary components, and implementing and managing those components
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Links
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Assignment URL: https://perscholas.instructure.com/courses/3187/assignments/619660
+- Github URL: https://github.com/traceynicole71-cloud/SBA9-React-Dashboard-Application
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## My process
+ My process was to develop code by following the activity tasks step-by-step.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+### Built with
+- React
+- CSS
+- Tailwind
+- Typescript
+
+
+### What I learned
+
+I learned how to plan and build components that work with dynamic data and implement proper React patterns for list rendering.
+
+### Continued development
+
+Continued development for me is to pay attention to importing and exporting that links each code file to the appropriate others. I also need to analyze the necessary file packages needed to make my live pages work approriately. I failed to download the Tailwind config file, so my page was not implementing the CSS code designs.
+
+### Useful resources
+
+- [Dave Gray Teaches Code Youtube] https://www.youtube.com/@DaveGrayTeachesCode
+- [Figma Hex Color Codes] https://www.figma.com/colors/hot-pink/
+
+### AI Collaboration
+
+I the Github co-pilot to analyze problems and provide solutions.  One of the problems I encountered with this project was, once again, using the crypto.randomUUID() feature. I had to do some research to understand and make the correction to prevent my app from crashing.  Google Gemini explained it, so I asked the Github co-pilot to hekp me correct my coding.
+
+
+## Acknowledgments
+
+I tackled this project early so that Jeffrey Leak could provide guidance in planning and structuring the files.  
+
