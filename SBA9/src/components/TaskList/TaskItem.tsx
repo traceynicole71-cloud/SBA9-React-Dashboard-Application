@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Task, Status } from '../../types/index.ts';
-import { formatDate } from '../../utils/taskUtils.ts';
+import type { Task, Status } from '../../types/index';
+import { formatDate } from '../../utils/taskUtils';
 import { Trash2, CheckCircle, Clock, AlertCircle } from 'lucide-react';
 
 interface Props {
@@ -34,7 +34,7 @@ export const TaskItem: React.FC<Props> = ({ task, onDelete, onStatusChange }) =>
                         }`}>
                         {task.title}
                     </h3>
-                    <span className={`text-[10px] uppercase px-2 py-0.5 rounded-full font-bold tracking-wider ${getPriorityStyles()}`}>
+                    <span className={`text-[10px] uppercase px-2 py-0.5 rounded-full font-bold tracking-wider ${getPriorityStyles(task.priority)}`}>
                         {task.priority}
                     </span>
                 </div>
@@ -44,7 +44,7 @@ export const TaskItem: React.FC<Props> = ({ task, onDelete, onStatusChange }) =>
                 </p>
 
                 {/*dates and status*/}
-                <div className="flex items-center gap-4 mt-3 text-[11px] texy-gray-400 font-medium">
+                <div className="flex items-center gap-4 mt-3 text-[11px] text-gray-400 font-medium">
                     <div className="flex items-center gap-1">
                         <Clock size={12} />
                         {formatDate(task.createdAt)}

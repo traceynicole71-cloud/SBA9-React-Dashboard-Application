@@ -1,4 +1,4 @@
-export type Priority = 'Low' | 'Mediuim' | 'High';
+export type Priority = 'Low' | 'Medium' | 'High';
 export type Status = 'To Do' | 'In Progress' | 'Completed';
 export type Theme = 'light' |'dark';
 

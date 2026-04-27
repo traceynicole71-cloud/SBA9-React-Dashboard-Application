@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Dashboard } from './components/Dashboard/Dashboard.tsx';
-import { Theme } from './types/index.ts';
+import { Dashboard } from './components/Dashboard/Dashboard';
+import type { Theme } from './types/index';
 import { Sun, Moon } from 'lucide-react';
 import './App.css'
 
